@@ -500,12 +500,13 @@ h3.my-profession{
 .service .service-item .service-item-inner{
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 30px 15px;
     text-align: center;
     transition: all 0.3s ease;
 }
 .service .service-item .service-item-inner:hover{
+    transform: scale(1.5);
     box-shadow: 0 0 20px rgba(48 , 46 , 77, 0.15);
 }
 .service .service-item .service-item-inner .icon{
@@ -534,7 +535,8 @@ h3.my-profession{
 }
 .service .service-item .service-item-inner h4{
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     color: var(--text-black-900);
     text-transform: capitalize;
 }
@@ -563,14 +565,42 @@ h3.my-profession{
 }
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
-    border-radius: 10px;
+    border-radius: 25px;
     overflow: hidden;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.portfolio .portfolio-item-inner:hover{
+    transform: scale(1.09);
+    box-shadow: 0 0 20px rgba(48 , 46 , 77, 0.15);
 }
 .portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
     display: block;
 }
+.portfolio .portfolio-item-inner .portfolio-text{
+    background-color: var(--bg-black-100);
+    border-radius: 20px;
+    padding: 20px 15px;
+    text-align: center;
+}
+.portfolio .portfolio-item-inner .portfolio-text h3{
+    font-style: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-black-900);
+}
+.portfolio .portfolio-item-inner .portfolio-text p{
+    font-style: 16px;
+    font-weight: 700;
+    color: var(--text-black-700);
+}
+.portfolio .portfolio-item-inner .portfolio-text span{
+    font-style: 14px;
+    font-weight: 400;
+    color: var(--skin-color)
+}
+
 /* contact */
 .contact-title{
     color: var(--skin-color);
@@ -592,6 +622,10 @@ h3.my-profession{
 }
 .contact .contact-info-item .icon{
     display: inline-block;
+    transition: all 0.2s ease;
+}
+.contact .contact-info-item .icon:hover{
+    transform: scale(2);
 }
 .contact .contact-info-item .icon .fa{
     font-size: 25px;
@@ -644,12 +678,13 @@ h3.my-profession{
 .contact .contact-form .form-item .form-control:focus{
     box-shadow: 0 0 20px rgba(48 , 46 , 77, 0.15);
 }
-.contact .contact-form .form-item textarea.form-control{
+.contact .contact-form .form-item input#message{
     height: 140px;
 }
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
+    cursor: pointer;
 }
 
 @media (max-width:1190px) {
@@ -693,7 +728,7 @@ h3.my-profession{
         max-width: 100%;
     }
     .home .home-img{
-        display: none;
+        margin-top: 30px;
     }
 }
 @media (max-width:767px) {

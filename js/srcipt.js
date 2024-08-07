@@ -73,3 +73,20 @@ const nav = document.querySelector(".nav"),
                 allSection[i].classList.toggle("open");
             }
         }
+    
+        function sendMail() {
+            let params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+            emailjs.send("service_cy0yps1", "template_m0rgrnb", params)
+                .then(function(response) {
+                    alert("Email Sent Successfully!");
+                }, function(error) {
+                    alert("Failed to send email. Please try again.");
+                });
+        }
+        
+    
